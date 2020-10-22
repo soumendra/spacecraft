@@ -5,10 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python (Integrated Terminal)",
-            "type": "python",
+            "name": "Launch Server",
+            "type": "dart",
             "request": "launch",
-            "console": "integratedTerminal"
+            "program": "bin/server.dart",
+            "cwd": "test-project",
+            "serverReadyAction": {
+                "pattern": "Listening on localhost:([0-9]+)",
+                "uriFormat": "http://localhost:%s",
+                "action": "openExternally"
+              }
         }
     ]
 }
