@@ -5,10 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python (Integrated Terminal)",
-            "type": "python",
+            "name": "Debug Hello",
+            "type": "Ruby",
             "request": "launch",
-            "console": "integratedTerminal"
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/test-project/hello.rb"
         }
     ]
 }

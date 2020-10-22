@@ -1,15 +1,15 @@
 {
-	"variants": ["3", "3.9", "3.8", "3.7", "3.6"],
+	"variants": ["2", "2.7", "2.6", "2.5"],
 	"build": {
-		"latest": true,
+		"latest": "true",
 		"rootDistro": "debian",
 		"tags": [
-			"python:${VERSION}-${VARIANT}"
+			"ruby:${VERSION}-${VARIANT}"
 		]
 	},
 	"dependencies": {
-		"image": "python:${VARIANT}",
-		"imageLink": "https://hub.docker.com/_/python",
+		"image": "ruby:${VARIANT}",
+		"imageLink": "https://hub.docker.com/_/ruby",
 		"debian": [
 			"apt-utils",
 			"git",
@@ -47,24 +47,18 @@
 			"ncdu",
 			"man-db",
 			"zsh",
-			"yarn"
+			"yarn",
+			"software-properties-common", 
+			"build-essential"
 		],
 		"git": {
 			"Oh My Zsh!": "/root/.oh-my-zsh",
 			"nvm": "/usr/local/share/nvm"
 		},
-		"pipx": [
-			"pylint",
-			"flake8",
-			"autopep8",
-			"black",
-			"yapf",
-			"mypy",
-			"pydocstyle",
-			"pycodestyle",
-			"bandit",
-			"virtualenv",
-			"pipx"
+		"gem": [
+			"rake",
+			"ruby-debug-ide",
+			"debase"
 		]
 	}
 }
